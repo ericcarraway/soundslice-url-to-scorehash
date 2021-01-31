@@ -28,6 +28,20 @@ describe(`soundslice-url-to-scorehash`, () => {
     expect(soundsliceUrlToScorehash(input)).to.equal(expectedOutput);
   });
 
+  it(`should handle an "embed" URL`, () => {
+    const input = `https://www.soundslice.com/slices/C1FVc/embed/`;
+    const expectedOutput = `C1FVc`;
+
+    expect(soundsliceUrlToScorehash(input)).to.equal(expectedOutput);
+  });
+
+  it(`should handle an "embed-mini" URL`, () => {
+    const input = `https://www.soundslice.com/slices/C1FVc/embed-mini/`;
+    const expectedOutput = `C1FVc`;
+
+    expect(soundsliceUrlToScorehash(input)).to.equal(expectedOutput);
+  });
+
   it(`should handle an "edit" URL`, () => {
     const input = `https://www.soundslice.com/slices/C1FVc/edit/`;
     const expectedOutput = `C1FVc`;

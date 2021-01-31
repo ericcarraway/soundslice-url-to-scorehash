@@ -1,14 +1,8 @@
 module.exports = function soundsliceUrlToScorehash(soundsliceUrl) {
-  const scorehash = soundsliceUrl
-    .replace(`https://`, ``)
-    .replace(`http://`, ``)
-    .replace(`www.`, ``)
-    .replace(`soundslice.com/slices/`, ``)
-    .replace(`/edit`, ``)
-    .replace(/\//g, ``);
+  const scorehash = soundsliceUrl.split(`slices/`)[1];
 
-  if (scorehash.includes(`?`)) {
-    return scorehash.split(`?`)[0];
+  if (scorehash.includes(`/`)) {
+    return scorehash.split(`/`)[0];
   }
 
   return scorehash;
