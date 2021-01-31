@@ -1,6 +1,6 @@
 {
   "name": "@percuss.io/soundslice-url-to-scorehash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Given a Soundslice URL, return the slice's scorehash. This is a unique identifier with a maximum size of 6 characters.",
   "main": "index.js",
   "scripts": {
